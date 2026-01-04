@@ -31,7 +31,7 @@ const Settings: React.FC<SettingsProps> = ({ settings, onUpdate }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto space-y-6">
+    <div className="max-w-2xl mx-auto space-y-6 pb-12">
       <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
         <div className="p-8 border-b bg-slate-900 text-white flex justify-between items-center">
           <div>
@@ -155,6 +155,21 @@ const Settings: React.FC<SettingsProps> = ({ settings, onUpdate }) => {
             </button>
           </div>
         </form>
+
+        {/* Credits Section inside Settings */}
+        <div className="p-8 bg-slate-50 border-t border-slate-100 flex flex-col items-center gap-4 text-center">
+          <div className="space-y-1">
+            <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Informações do Desenvolvedor</p>
+            <p className="text-sm font-bold text-slate-800">
+              Desenvolvido por Karony Rubia Custodio dos anjos & Alpha Wolves
+            </p>
+            <p className="text-xs text-slate-500">Versão 2.0</p>
+          </div>
+          <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm w-full max-w-xs">
+            <p className="text-[10px] font-black text-slate-400 uppercase mb-1 tracking-tighter">Suporte Técnico Direto</p>
+            <a href="tel:18991362185" className="text-lg font-black text-indigo-600 hover:text-indigo-700 transition-colors">18 99136-2185</a>
+          </div>
+        </div>
       </div>
     </div>
   );

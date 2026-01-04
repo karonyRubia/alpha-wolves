@@ -108,8 +108,23 @@ const Layout: React.FC<LayoutProps> = ({ children, currentView, onViewChange, se
           </button>
         </header>
 
-        <div className="flex-1 overflow-y-auto p-4 md:p-8">
-          {children}
+        <div className="flex-1 overflow-y-auto p-4 md:p-8 flex flex-col">
+          <div className="flex-1">
+            {children}
+          </div>
+          
+          {/* Main Content Footer for mobile and general visibility */}
+          <footer className="mt-12 py-8 border-t border-slate-200 flex flex-col items-center text-center gap-2 no-print">
+            <p className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Alpha Wolves Ecosystem</p>
+            <p className="text-xs text-slate-500 font-medium max-w-xs leading-relaxed">
+              Desenvolvido por <span className="text-slate-900 font-bold">Karony Rubia Custodio dos anjos & Alpha Wolves</span>
+            </p>
+            <p className="text-[10px] text-slate-400 font-bold">Versão 2.0</p>
+            <div className="flex flex-col gap-1 mt-2">
+              <span className="text-[10px] text-slate-400 uppercase font-black tracking-tighter">Suporte Técnico</span>
+              <a href="tel:18991362185" className="text-sm text-indigo-600 font-black hover:underline transition-all">18 99136-2185</a>
+            </div>
+          </footer>
         </div>
 
         {/* Mobile Bottom Navigation */}
